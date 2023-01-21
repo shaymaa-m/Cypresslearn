@@ -9,6 +9,7 @@ it('checks api status un-successful login', () => {
         body: {
             email: 'shaymaa@cialfo.com.sg',
             password: '12345678'
+    
         }
     }).then((response) => {
         expect(response.status).to.eq(400);
