@@ -69,32 +69,32 @@ let userBody = {
   describe('Create Signup', () => {
 
     it('Successful signup with all fields included', () => {
-      cy.sendRequest("dev780@yopmail.com", "123123123","Demo","Student78","M","9576 3017","+65","true",200)
+      cy.sendRequest("dev7809@yopmail.com", "123123123","Demo","Student78","M","9556 3017","+65","true",200)
       cy.wait(30000)
     })
 
     it('User forgot to add password', () => {
-        cy.sendRequest("dev5209@yopmail.com", "","Demo","Student5209","M","","+65","false",400)
+        cy.sendRequest("dev5200@yopmail.com", "","Demo","Student5209","M","","+65","false",400)
         cy.wait(30000)
       })
 
     it('User exists with same contact number', () => {
-        cy.sendRequest("dev533@yopmail.com", "123123123","Demo","Student533","M","9576 3017","+65","true",422)
+        cy.sendRequest("dev533@yopmail.com", "123123123","Demo","Student533","M","9556 3017","+65","true",422)
         cy.wait(30000)
       })
 
     it('User providing invalid number', () => {
-        cy.sendRequest("demo09008@yopmail.com", "123123123","Demo","Student0900","M","2222 30000","+65","true",422)
+        cy.sendRequest("demo09088@yopmail.com", "123123123","Demo","Student0900","M","2222 30000","+65","true",422)
         cy.wait(30000)
       })
 
     it('User exists with same email', () => {
-        cy.sendRequest("dev780@yopmail.com", "123123123","Demo","Student43","M","","+65","true",422)
+        cy.sendRequest("dev7809@yopmail.com", "123123123","Demo","Student43","M","","+65","true",422)
         cy.wait(30000)
       })
 
       it('User did not accept terms and conditions', () => {
-        cy.sendRequest("devi6090@yopmail.com", "123123123","Demo","Student43","M","","+65","true",200)
+        cy.sendRequest("deve6030@yopmail.com", "123123123","Demo","Student43","M","","+65","true",200)
       })
   
 })
