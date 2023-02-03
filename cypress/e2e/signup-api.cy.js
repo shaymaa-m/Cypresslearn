@@ -1,23 +1,6 @@
 ///<reference types="cypress" />
-const randomEmail = "shaimatest" + "+" + Math.random().toString(36).substring(7) + "@yopmail.com"
 
-let userBody = {
-    user:
-        {
-            first_name:"",
-            last_name:"",
-            email:"",
-            gender:"",
-            gender_preference:"",
-            has_accepted_conditions:"",
-            mobile:"",
-            mobile_country_code:"",
-            onboarded:"",
-            password:"",
-           
-        }
-  };
-  
+const randomEmail = "shaimatest" + "+" + Math.random().toString(36).substring(7) + "@yopmail.com"
   cy.requestHeader =  {
     'Content-Type': 'application/json',
     'User-Agent': 'wTRGdmtTaDUzdCDD',
@@ -25,20 +8,6 @@ let userBody = {
   }
   
   cy.url = 'https://sandbox.cialfo.sg/v3/users/access_student_create?access_token=Zx2EE58K0tyzL8V4Xh7GLYYhQzHcz7Q05jrRXAcfw1&captcha_token='
-  
-  cy.customizeUserBody = (email, password,first_name,last_name,gender,gender_preference,mobile,mobile_country_code,has_accepted_conditions,onboarded) => {
-    userBody.user.email = email;
-    userBody.user.password = password;
-    userBody.user.first_name= first_name;
-    userBody.user.last_name= last_name;
-    userBody.user.gender= gender;
-    userBody.user.gender_preference= gender_preference;
-    userBody.user.mobile =  mobile;
-    userBody.user.mobile_country_code = mobile_country_code;
-    userBody.user.has_accepted_conditions= has_accepted_conditions;
-    userBody.user.onboarded= onboarded;
-    return userBody
-  };
   
   cy.sendRequest = (email, password,first_name,last_name,gender,mobile,mobile_country_code,has_accepted_conditions, responseCode) => {
     cy.request({
@@ -67,7 +36,7 @@ let userBody = {
   describe('Create Signup', () => {
 
     it('Successful signup with all fields included', () => {
-      cy.sendRequest(randomEmail, "123123123","Demo","Student78","M","9556 3017","+65","true",200)
+      cy.sendRequest(randomEmail, "123123123","Demo","Student78","M","9556 3029","+65","true",200)
       cy.wait(30000)
     })
 
