@@ -44,11 +44,7 @@ let userBody = {
     cy.request({
       method: 'POST',
       url: cy.url,
-      headers: {
-        'Content-Type': 'application/json',
-        'User-Agent': 'wTRGdmtTaDUzdCDD',
-        'platform': 'web'
-      },
+      headers: cy.requestHeader,
       failOnStatusCode: false,
       body : {
         user:
