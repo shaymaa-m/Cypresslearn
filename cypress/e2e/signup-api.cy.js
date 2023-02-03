@@ -1,4 +1,4 @@
-//<reference types="cypress" />
+///<reference types="cypress" />
 const randomEmail = "shaimatest" + "+" + Math.random().toString(36).substring(7) + "@yopmail.com"
 
 let userBody = {
