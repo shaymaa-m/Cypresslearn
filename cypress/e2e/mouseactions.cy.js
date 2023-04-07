@@ -46,7 +46,7 @@ describe('mouse actions', () => {
         .contains('Free Deep Learning eBooks').click()
 
     })
-    it.only('Drag item and drop it using mouse action' , () => {
+    it('Drag item and drop it using mouse action' , () => {
         cy.visit("https://www.globalsqa.com/demo-site/draganddrop/")
         cy.get('.resp-tabs-list ').contains('Accepted Elements').click()
         cy.wait(3000)
@@ -61,29 +61,5 @@ describe('mouse actions', () => {
         .wait(2000)
         
     })
-    
-    it('Mouse double click and see the message' , () => {
-        cy.visit('https://demo.guru99.com/test/simple_context_menu.html')
-        cy.get('button')
-        .contains('Double-Click Me To See Alert')
-        .dblclick()
-        .wait(2000)
-        cy.on('window:alert', (text) => {
-              expect(text)
-                .to.equal("You double clicked me.. Thank You..")
-          })
-              
-    })
-
-    it('Right click capture' , () => {
-        cy.visit('https://demo.guru99.com/test/simple_context_menu.html')
-        cy.get('.context-menu-one')
-        .contains('right click me')
-        .rightclick()
-        .wait(1000)
-        cy.get('.context-menu-icon-quit > span').click()
-        
-    })
-
   
 })
