@@ -1,0 +1,8 @@
+Title: , Work: , Salary: 
+Title: Software Development Engineer in Test, Work: Automation, Salary: $150,000+
+Title: Automation Testing Architect, Work: Automation, Salary: $120,000+
+Title: Quality Assurance Engineer, Work: Manual, Salary: $50,000+
+Title: , Work: , Salary: 
+Title: Software Development Engineer in Test, Work: Automation, Salary: $150,000+
+Title: Automation Testing Architect, Work: Automation, Salary: $120,000+
+Title: Quality Assurance Engineer, Work: Manual, Salary: $50,000+
